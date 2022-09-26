@@ -1,0 +1,11 @@
+package com.iservport
+
+package object quiz {
+
+  type SampleResult[A] = Either[SampleError, A]
+
+  sealed trait SampleError
+
+  case class ConnectionError(connection: String) extends SampleError
+  case class NotFound(search: String) extends SampleError
+}

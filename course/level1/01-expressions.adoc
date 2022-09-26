@@ -1,0 +1,20 @@
+= Tudo são expressões
+
+link:../index.adoc[Home]/level1
+
+
+[source,scala]
+----
+val ex1 = if (Math.random() > 0.5) 1 else 0
+val ex2 = for {
+    a <- Seq(1, 2, 3)
+    b <- s"Valor $a"
+  } yield b.mkString(", ")
+var ex3 = new Date()
+----
+
+== Quiz
+
+1. Quais valores pode assumir `ex1`?
+2. Qual o valor de `ex2`
+3. Quais desses valores são imutáveis?

@@ -1,0 +1,49 @@
+= Scala requer menos linhas de código
+
+link:../index.adoc[Home]/level1
+
+- Não requer ; ao final das expressões.
+- Não requer return ao final de métodos ou funções.
+- Permite definir mais de uma classe por arquivo.
+- O compilador Scala é capaz de inferir tipos em muitas situações, 
+  - porém parâmetros de funções exigem definições explícitas de tipo.
+
+Em Scala
+
+[source,scala]
+----
+class Square(side: Double) {
+  val area = side * side
+}
+----
+O equivalente em Java seria
+
+[source,java]
+----
+public class Square {
+
+    private Integer side;
+    private Double area;
+
+    public Square(Integer side) {
+        this.side = side;
+        this area = side * side;
+    }
+    public Integer getSide() {
+        return this.side;
+    }
+    public Double getArea() {
+        return this.area;
+    }
+}
+----
+
+
+== Quiz
+
+Para instanciar uma classe, é necessário definir um ou mais construtores.
+- No construtor Scala
+    - Os parâmetros do construtor default são declarados logo após o nome da classe? S/N
+    - O corpo do construtor é o próprio corpo da classe (por exemplo, area)? S/N 
+    - É possível declarar outros construtores? S/N
+

@@ -1,0 +1,63 @@
+= Case class
+
+link:../index.adoc[Home]/level1
+
+== Case class
+
+Além de `class`, `case class` é ligeiramente diferentes
+
+[source,scala]
+----
+case class SmarterSquare(side: Double) {
+  val area = side * side
+}
+----
+
+Na criação de novas instâncias
+
+[source,scala]
+----
+  val s2 = SmarterSquare(10)
+----
+Uma `case class` inclui:
+
+- métodos `.apply` e `.unapply`, respectivamente, para criar uma instância e extrair
+parâmetros de uma instância.
+- método `.copy` para facilitar cópias de uma instância.
+
+O que a torna apropriada para `pattern matching`
+
+[source,scala]
+----
+val side = s2 match {
+  case SmarterSquare(s) => s
+  case _ => 0
+}
+----
+
+== Quiz
+
+Dada a classe
+
+[source,scala]
+----
+case class Rectangle(l1: Double, l2: Double)
+----
+Interprete:
+
+- Pattern matching, qual o valor de `result` abaixo?
+
+[source,scala]
+----
+val result = Rectangle(2, 3) match {
+  case Rectangle(_, b) if b < 5 => "Altura insuficiente"
+  case Rectangle(a, b)          => s"Área ${a * b}"
+  case _                        => "Inválido"
+}
+----
+
+- O que resulta de result.copy(l2 = 6)?
+- São equivalentes as expressões a seguir?
+  - Retangle(2, 3)
+  - new Retangle(2, 3)
+  - Retangle.apply(2, 3)

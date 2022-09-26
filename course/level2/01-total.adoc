@@ -1,0 +1,6 @@
+# Funções puras
+
+- São totais, ou seja, são defindas para quaisquer valores de entrada.
+- Idempotentes, por que sempre retornam o mesmo resultado dados as mesmas entradas.
+- Não possuem efeitos colaterais.
+

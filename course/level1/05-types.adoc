@@ -1,0 +1,51 @@
+# Mais Sobre Tipos
+
+link:../index.adoc[Home]/level1
+
+
+## Trait
+
+Assim como `interface` em Java, `trait` representa um contrato:
+
+[source,scala]
+----
+trait Repository {
+
+  def getById(id: Int): Address
+}
+----
+
+## Singleton object
+
+[source,scala]
+----
+object H2Repository extends Repository {
+
+  def getById(id: Int): Address = ??? // some code to get address by id
+}
+----
+
+== Companion object
+
+Métodos estáticos são declarados em um singleton com o mesmo
+nome da classe, chamado de `companion object`.
+
+[source,scala]
+----
+case class PostalCode(value: String)
+object PostalCode {
+  def format(value: String): String = ??? // formatador
+}
+----
+
+== Quiz
+
+Pesquise:
+
+- Funções em uma `trait` podem ser concretas?
+- Uma classe pode extender mais de uma trait?
+
+[source,scala]
+----
+object Repo extends DbRepo with Logging
+----

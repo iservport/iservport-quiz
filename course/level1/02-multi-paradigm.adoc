@@ -1,0 +1,47 @@
+= Scala requer menos linhas de código
+
+link:../index.adoc[Home]/level1
+
+Scala suporta
+
+- Programação Orientada a Objeto
+- Programação Funcional
+
+Classes
+
+[source,scala]
+----
+class Square(side: Double) {
+  val area = side * side
+}
+----
+Na criação de novas instâncias
+
+[source,scala]
+----
+  val s1 = new Square(10)
+----
+
+Funções
+
+[source,scala]
+----
+val toParagraph: Any => String = a = s"<p>$a</p>"
+----
+
+Placeholder, quando é possível inferir qual o parâmetro requerido na função
+
+[source,scala]
+----
+val toString: Any => String = _.toString
+----
+
+== Quiz
+
+- _.toString é o mesmo que a => a.toString ?
+- A função toParagraph descrita acima pode ser também descrita como abaixo?
+
+[source,scala]
+----
+def toParagraph(a: Any): String = s"<p>$a</p>
+----
