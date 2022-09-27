@@ -1,5 +1,7 @@
 = É preciso evitar nulos
 
+link:../index.adoc[Home]/level2
+
 - Para termos funções totais não devemos admitir nulos.
 
 Scala Option[A]

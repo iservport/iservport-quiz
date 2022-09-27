@@ -1,5 +1,7 @@
 = É preciso definir um modelo de erros
 
+link:../index.adoc[Home]/level2
+
 [source,scala]
 ----
     sealed trait ErrorModel

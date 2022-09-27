@@ -1,0 +1,32 @@
+= Ferramental
+
+link:../index.adoc[Home]/level1
+
+== SBT
+
+É a mais tradicional ferramenta de construção Scala.
+
+* gerencia dependências
+* define opções
+* constroi e testa o projeto
+
+Comandos úteis:
+
+* `sbt compile`
+* `sbt test`
+* `sbt run`
+
+`build.sbt`
+[source, scala]
+----
+libraryDependencies ++= Seq(
+  "com.zaxxer"                         % "HikariCP"          % "5.0.1",              // connection pool
+  "com.h2database"                     % "h2"                % "2.1.214",            // database
+  "io.getquill"                       %% "quill-jdbc"        % "4.4.1"               // persistence layer
+)
+----
+
+== Quiz
+
+- É possível usar bibliotecas java no SBT?
+- Qual a diferença entre % e %% nas definições de dependências?

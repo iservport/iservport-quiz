@@ -1,5 +1,7 @@
 = É preciso limitar exceções
 
+link:../index.adoc[Home]/level2
+
 - Para termos funções totais devemos limitar exceções.
 
 Scala Either[E, A] e Scala Try[A]

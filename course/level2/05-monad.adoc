@@ -1,2 +1,4 @@
 = Compondo funções
 
+link:../index.adoc[Home]/level2
+

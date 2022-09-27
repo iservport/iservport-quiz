@@ -1,9 +1,8 @@
-# Mais Sobre Tipos
+= Mais Sobre Tipos
 
 link:../index.adoc[Home]/level1
 
-
-## Trait
+== Trait
 
 Assim como `interface` em Java, `trait` representa um contrato:
 
@@ -15,7 +14,7 @@ trait Repository {
 }
 ----
 
-## Singleton object
+== Singleton object
 
 [source,scala]
 ----
