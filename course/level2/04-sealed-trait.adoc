@@ -1,0 +1,21 @@
+= É preciso definir um modelo de erros
+
+[source,scala]
+----
+    sealed trait ErrorModel
+    case class NotFound(idx: Int) extends ErrorModel
+    case class Invalid(value: String) extends ErrorModel
+----
+
+== Quiz
+
+[source,scala]
+----
+case class Record(idx: Int, value: String)
+trait Repo {
+  def getNextRecord: ErrorModel[Record]
+}
+----
+- caso não encontrado, retorna um tipo ____
+- caso encontrado inválido, retorna um tipo ____
+- caso encontrado válido, retorna um tipo ____

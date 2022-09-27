@@ -6,6 +6,7 @@ package object quiz {
 
   sealed trait SampleError
 
-  case class ConnectionError(connection: String) extends SampleError
+  case class DbConnectionError(connection: String) extends SampleError
+  case class HttpConnectionError(connection: String) extends SampleError
   case class NotFound(search: String) extends SampleError
 }

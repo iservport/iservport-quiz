@@ -1,0 +1,28 @@
+= É preciso evitar nulos
+
+- Para termos funções totais não devemos admitir nulos.
+
+Scala Option[A]
+
+[source,scala]
+----
+val nullValue = null
+val opt1 = Option(nullValue)
+val numberValue = 1
+val opt2 = Option(numberValue)
+val v1 = opt1.getOrElse(0)
+val v2 = opt2.get
+val v3 = opt2.fold(0)(n => n + 1) // opt2.fold(0)(_ + 1)
+----
+
+== Quiz
+
+Marque verdadeiro ou falso:
+
+- opt1 == None
+- opt2 == Some(1)
+- v1 == 1
+- v2 == 1
+- v3 == 2
+
+

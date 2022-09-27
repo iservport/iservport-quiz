@@ -1,0 +1,27 @@
+= É preciso limitar exceções
+
+- Para termos funções totais devemos limitar exceções.
+
+Scala Either[E, A] e Scala Try[A]
+
+[source,scala]
+----
+val invert: Int => Try[Double] = value => Try (1 / value)
+val success = invert(1)
+val failure = invert(0)
+val right = success.toEither
+val left = failure.toEither
+def invert2(value: Int): Either[String, Double] =
+  invert(value).toOption.toRight(s"Erro ao inverter $value.")
+----
+
+== Quiz
+
+Marque verdadeiro ou falso:
+
+- success == Success(1)
+- failure == Failure(1)
+- o tipo inferido para right é Right[Int]
+- o tipo inferido para right é Left[Exception]
+- invert2(1) == Rigth(1.0)
+- invert2(0) == Left("Erro ao inverter 0.")
