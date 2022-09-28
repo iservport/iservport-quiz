@@ -4,6 +4,8 @@
 
 Para prepara o ambiente, https://sdkman.io/[SDKMan] pode ser útil.
 
+Veja on-line https://www.coursera.org/[este conteúdo].
+
 == Nível 1
 1. Tudo são link:level1/01-expressions.adoc[expressões]
 2. Scala é link:level1/02-multi-paradigm.adoc[multi-paradigma]
