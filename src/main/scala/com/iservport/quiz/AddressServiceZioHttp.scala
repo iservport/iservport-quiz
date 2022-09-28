@@ -13,15 +13,15 @@ object AddressServiceZioHttp {
 
   import zio._
 
-  private def request(url: String): ZIO[ChannelFactory with EventLoopGroup, Throwable, String] =
-    for {
+  private def request(url: String): ZIO[Any, Throwable, String] =
+    (for {
       res  <- Client.request(url)
       json <- res.body.asString
-    } yield json
+    } yield json).provide(env)
 
   def get(url: String): Future[String] =
     Unsafe.unsafe { implicit unsafe =>
-      val runtime: Runtime.Scoped[ChannelFactory with EventLoopGroup] = Runtime.unsafe.fromLayer(env)
+      val runtime: Runtime.Scoped[Any] = Runtime.unsafe.fromLayer(env)
       runtime.unsafe.runToFuture(request(url))
     }
 }

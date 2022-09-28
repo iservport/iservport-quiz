@@ -10,7 +10,9 @@ Para prepara o ambiente, https://sdkman.io/[SDKMan] pode ser útil.
 3. Scala é link:level1/03-succintness.adoc[sucinto]
 4. Scala facilita a link:level1/04-case-class.adoc[representação de dados]
 5. Scala é link:level1/05-types.adoc[estaticamente tipada]
-6. link:level1/06-tools.adoc[Ferramental]
+6. link:level1/06-implicits.adoc[Implícitos]
+7. Programação assíncrona com link:level1/07-future.adoc[Future]
+8. link:level1/08-tools.adoc[Ferramental]
 
 == Nível 2
 1. Funções link:level2/01-total.adoc[totais]

@@ -1,0 +1,15 @@
+= Programação assíncrona com Future
+
+link:../index.adoc[Home]/level1
+
+* Um *Future* tenta executar o código simultaneamente,
+** mesmo quando aumentar a simultaneidade reduz o desempenho devido à sobrecarga adicional.
+* Quando um *Future* é instanciado, a execução da tarefa é imediatamente despachada para o `ExecutionContext` global, que por sua vez atribui a tarefa a um _thread_ do SO para iniciar a execução imediatamente.
+** O `ExecutionContext` é justamente a entidade que gerencia essas _threads_.
+* Portanto, um *Future* requer um `ExecutionContext` implícito no escopo.
+** Isso significa que quando trabalhamos com o *Future*, o que deve ser feito é confundido com como deve ser feito.
+* Um *Future* sempre será executado até a conclusão, independentemente de seu valor ser usado ou se seu trabalho é ainda necessário.
+
+[source,scala]
+----
+----

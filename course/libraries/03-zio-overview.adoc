@@ -1,0 +1,22 @@
+= Overview of the ZIO Ecosystem
+
+link:../index.adoc[Home]/libraries
+
+Source: https://akkaalternatives.com/
+
+ZIO é um ecossistema de última geração que permite aos desenvolvedores criar aplicações assíncronas, simultâneas, resilientes, eficientes, fáceis de entender e de testar, utilizando os princípios da Programação Funcional. Alimentado por threads virtuais, ZIO melhora radicalmente os Modelos de Atores usando novas abordagens para concorrência e distribuição.
+
+O extenso ecossistema ZIO, que é um dos que mais crescem em sua categoria, com centenas de contribuidores, inclui componentes modulares que permitem o rápido desenvolvimento de back-end, incluindo soluções para GraphQL, RDBMS, NoSQL, big data, análises, APIs REST, autenticação e muito mais.
+
+Por exemplo:
+
+* *ZIO Streams*: Uma solução para recursos assíncronos, simultâneos, seguros e de alto desempenho aplicativos de streaming, incluindo back-ends Web e _mobile_, _pipeline_ de dados e aplicações de engenharia de dados.
+* *ZIO STM*: Uma solução de alto nível para simultaneidade sem bloqueios e sem _race conditions_, que permite que desenvolvedores de todos os níveis de habilidade se beneficiem dos modernos sistemas multicore.
+* *ZIO Config*: Uma solução para trabalhar com dados de configuração de aplicativos provenientes de qualquer fonte, que fornece segurança de tipo, geração de documentação, e informações de diagnóstico.
+* *ZIO JSON*: Para trabalhar com dados JSON com ótimo desempenho, menos risco de explorações de segurança e muito menos _boilerplate_.
+* *ZIO HTTP*: Uma biblioteca poderosa que é usada para construir servidores e clientes de alto desempenho baseados em HTTP.
+* *Caliban*: Para construir servidores e clientes GraphQL puramente funcionais.
+* *ZIO Quill*: Biblioteca para escrever consultas SQL (e CQL) semelhantes à API de coleções Scala. Mostra todas as consultas que o aplicativo executará durante o tempo de compilação para evitar surpresas. (API semelhante ao Slick.)
+* *ZIO JDBC*: Interface ZIO pequena e idiomática para JDBC, proporcionando um ambiente agradável e experiência amigável ao desenvolvedor para acesso JDBC de baixo nível.
+* *ZIO SQL*: Permite escrever consultas SQL de tipo seguro e combináveis em Scala comum, ajudando você a evitar bugs de persistência antes que eles aconteçam e aproveitando seu IDE para tornar a escrita SQL produtiva, segura e divertida.
+* *Shardcake*: Transparência de localização e fragmentação para aplicativos Scala ZIO, permitindo hospedar entidades (como atores) em um único nó dentro de um cluster, com auto-recuperação e fragmentação.
