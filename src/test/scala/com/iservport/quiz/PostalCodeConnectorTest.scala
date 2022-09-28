@@ -13,13 +13,13 @@ import org.scalatest.wordspec.AsyncWordSpec
 import scala.concurrent.duration.DurationInt
 import scala.concurrent.{Await, Future}
 
-class SampleConnectorTest extends AsyncWordSpec with Matchers with EitherValues with Futures {
+class PostalCodeConnectorTest extends AsyncWordSpec with Matchers with EitherValues with Futures {
 
   "SampleConnector" should {
 
     "GET" in {
 
-      val connector = new SampleConnector
+      val connector = new PostalCodeConnector
       val address: Either[String, StreetAddress] = connector.getAddressFromPostalCode("80620-010").futureValue(Timeout(Span(5, Seconds)))
       address.value.description mustBe "Avenida República Argentina - de 826/827 a 2079/2080"
     }

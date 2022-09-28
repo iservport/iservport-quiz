@@ -17,4 +17,4 @@ Para prepara o ambiente, https://sdkman.io/[SDKMan] pode ser útil.
 2. Evitando link:level2/02-option.adoc[nulos]
 3. Evitando link:level2/03-either.adoc[exceções]
 4. Modelo de link:level2/04-sealed-trait.adoc[erros]
-5. Coposição de link:level2/05-monad.adoc[funções]
+5. Composição de link:level2/05-monad.adoc[funções]
