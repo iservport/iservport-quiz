@@ -1,3 +1,5 @@
 = Implícitos
 
 link:../index.adoc[Home]/level1
+
+Escopo

@@ -4,6 +4,7 @@ link:../index.adoc[Home]/level1
 
 - Não requer ; ao final das expressões.
 - Não requer return ao final de métodos ou funções.
+- O tipo `Unit`, também expresso `()`, é um retorno vazio (void).
 - Permite definir mais de uma classe por arquivo.
 - O compilador Scala é capaz de inferir tipos em muitas situações, 
   - porém parâmetros de funções exigem definições explícitas de tipo.
@@ -38,11 +39,10 @@ public class Square {
 }
 ----
 
-
 == Quiz
 
-Para instanciar uma classe, é necessário definir um ou mais construtores.
-- No construtor Scala
+Para instanciar uma classe, é necessário definir um ou mais construtores. No construtor Scala:
+
     - Os parâmetros do construtor default são declarados logo após o nome da classe? S/N
     - O corpo do construtor é o próprio corpo da classe (por exemplo, area)? S/N 
     - É possível declarar outros construtores? S/N

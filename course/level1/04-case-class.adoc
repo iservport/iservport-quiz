@@ -56,7 +56,7 @@ val result = Rectangle(2, 3) match {
 }
 ----
 
-- O que resulta de result.copy(l2 = 6)?
+- O que resulta de `result.copy(l2 = 6)`?
 - São equivalentes as expressões a seguir?
   - Retangle(2, 3)
   - new Retangle(2, 3)

@@ -8,7 +8,7 @@ link:../index.adoc[Home]/level1
 val ex1 = if (Math.random() > 0.5) 1 else 0
 val ex2 = for {
     a <- Seq(1, 2, 3)
-    b <- s"Valor $a"
+    b = s"Valor $a"
   } yield b.mkString(", ")
 var ex3 = new Date()
 ----

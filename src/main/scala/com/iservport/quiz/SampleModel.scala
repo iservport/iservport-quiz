@@ -4,7 +4,7 @@ import java.time.Instant
 
 object SampleModel {
 
-  case class StreetAddress(description: String, postal_code: String, district: String, city: String, state: String, country: String = "BR", id: Int = 0, submission_date: Instant = Instant.now())
+  case class StreetAddress(description: String, postal_code: String, district: String, city: String, state: String, id: Int = 0, country: String = "BR", submission_date: Instant = Instant.now())
 
   case class District(description: String, city: String, state: String, country: String = "BR", id: Int = 0, submission_date: Instant = Instant.now())
 
