@@ -1,3 +1,12 @@
 = Hikari
 
 link:../index.adoc[Home]/libraries
+
+O padrão SQL define a linguagem de conexão com o banco de dados relacional, apesar de, pelo menos, dois problemas de desempenho.
+
+Os gerenciadores de connection pool resolvem estes dois problema.
+
+Referências:
+
+- https://aleatitus.me/hikari-connection-pool/
+- https://github.com/brettwooldridge/HikariCP/wiki/Down-the-Rabbit-Hole
