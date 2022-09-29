@@ -1,3 +1,15 @@
 = For-comprheension
 
-Açuca sintático para containers.
+Açúcar sintático para tipos que se comportem como mônadas e ainda tenham:
+
+- withFilter
+- foreach
+
+Exemplo parcial:
+[code, scala]
+----
+class C[+A](val a:A) {
+ def flatMap[B](f:(A) => C[B]):C[B] = f(a)
+ def map[B](f:(A)=>B):B = f(a)
+}
+----

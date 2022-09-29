@@ -2,3 +2,40 @@
 
 link:../index.adoc[Home]/level2
 
+Mônada é um conceito matemático da teoria das categorias.
+
+> Dito isso, vamos apenas nos concentrar nos efeitos práticos de uma mônada, não na teoria.
+
+Quer se link:https://pt.wikipedia.org/wiki/Teoria_das_categorias[aprofundar]?
+
+Sua utilidade vem de:
+
+- facilidade para combinar Funções
+- portanto, facilidade em compor-se usando `for-comprehensions` (veja link:06-comprehensions.adoc[For-comprheension])
+
+Para fazer uma livre associação, pense em uma mônada como uma "copiadora especializada":
+
+- Por exemplo, uma copiadora onde você coloca um documento em uma língua e retira uma cópia traduzida, uma outra onde a cópia vem classificada em diferentes categorias, etc.
+- Para classificar e traduzir de formas diferentes, basta combinar as duas copiadoras.
+- O resultado final, será sempre uma cópia.
+
+Alguns tipos em Scala assumem o comportamento de mônadas. Eles possuem as funções:
+
+- flatMap
+- map
+
+Exemplo:
+[code, scala]
+----
+class C[+A](val a:A) {
+ def flatMap[B](f:(A) => C[B]):C[B] = f(a)
+ def map[B](f:(A)=>B):B = f(a)
+}
+----
+
+== Quiz
+
+- `Option` pode funcionar como uma mônada?
+- `Either` pode funcionar como uma mônada?
+- `Future` pode funcionar como uma mônada?
+- `List` pode funcionar como uma mônada?

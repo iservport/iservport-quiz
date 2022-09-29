@@ -7,6 +7,7 @@ Para prepara o ambiente, https://sdkman.io/[SDKMan] pode ser útil.
 Veja on-line https://www.coursera.org/[este conteúdo].
 
 == Nível 1
+
 1. Tudo são link:level1/01-expressions.adoc[expressões]
 2. Scala é link:level1/02-multi-paradigm.adoc[multi-paradigma]
 3. Scala é link:level1/03-succintness.adoc[sucinto]
@@ -17,8 +18,17 @@ Veja on-line https://www.coursera.org/[este conteúdo].
 8. link:level1/08-tools.adoc[Ferramental]
 
 == Nível 2
+
 1. Funções link:level2/01-total.adoc[totais]
 2. Evitando link:level2/02-option.adoc[nulos]
 3. Evitando link:level2/03-either.adoc[exceções]
 4. Modelo de link:level2/04-sealed-trait.adoc[erros]
 5. Composição de link:level2/05-monad.adoc[funções]
+6. link:level2/06-comprehensions.adoc[For-comprehensions]
+7. link:level2/07-implicits.adoc[Implícitos]
+
+== Bibliotecas
+
+1. link:libraries/01-hikari.adoc[Hikari]
+2. link:libraries/02-quill.adoc[Quill]
+3. link:libraries/03-zio-overview.adoc[ZIO]

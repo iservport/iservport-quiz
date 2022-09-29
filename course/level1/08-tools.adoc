@@ -26,7 +26,20 @@ libraryDependencies ++= Seq(
 )
 ----
 
+Conheça melhor o https://www.scala-sbt.org/[SBT]
+
+== Git
+
+> Se você está lendo esse projeto em sua própra máquina, provavelmente você já conhece o git. Sinta-se a vontade para avançar para o próximo capítulo.
+
+Git é uma ferramenta de controle de versão que pode se conectar a múltiplos repositórios, sendo pelo menos um deles local.
+
+- Conheça os https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet[comandos].
+- Conheça o https://docs.github.com/pt[Github] ou o https://docs.gitlab.com/ee/tutorials/make_your_first_git_commit.html#what-is-git[Gitlab]
+- Documentação https://git-scm.com/[oficial]
+
 == Quiz
 
 - É possível usar bibliotecas java no SBT?
 - Qual a diferença entre % e %% nas definições de dependências?
+- O que contém a pasta `.git` que faz parte desse projeto?
