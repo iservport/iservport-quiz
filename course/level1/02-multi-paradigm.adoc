@@ -1,4 +1,4 @@
-= Scala requer menos linhas de código
+= Scala é Multi-paradigma
 
 link:../index.adoc[Home]/level1
 
