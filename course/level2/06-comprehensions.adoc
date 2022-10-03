@@ -1,15 +1,76 @@
-= For-comprheension
+= For-comprhension
 
-Açúcar sintático para tipos que se comportem como mônadas e ainda tenham:
+Um `for-loop` percorre uma sequência de valores para compor o resultado de operações usando cada valor. O valor retornado é Unit, ou seja, sem retorno.
+
+[code,scala]
+----
+val x = for {
+  par <- Seq(2, 4, 6)
+  impar <- Seq(1, 3, 5)
+} {
+  print(s"[$impar, $par] ")
+}
+println(x)
+----
+Uma `for-comprheension`, em contraste ao for-loop, produz um valor tal como uma expressão (note a palavra-chave `yield`).
+[code,scala]
+----
+val y = for {
+  par <- Seq(2, 4, 6)
+  impar <- Seq(1, 3, 5)
+} yield {
+  s"[$impar, $par] "
+}
+println(y.mkString)
+----
+O resultado de y é:
+[code, scala]
+----
+[1, 2] [3, 2] [5, 2] [1, 4] [3, 4] [5, 4] [1, 6] [3, 6] [5, 6]
+----
+
+Na verdade, o `for` é um açúcar sintático para tipos que se comportem como mônadas e ainda tenham:
 
 - withFilter
 - foreach
 
-Exemplo parcial:
+Expansão:
 [code, scala]
 ----
-class C[+A](val a:A) {
- def flatMap[B](f:(A) => C[B]):C[B] = f(a)
- def map[B](f:(A)=>B):B = f(a)
+  val x: Unit =
+    Seq(2, 4, 6).foreach(par =>
+      Seq(1, 3, 5).foreach(impar => print(s"[$impar, $par] "))
+    )
+----
+[code, scala]
+----
+  val y: Seq[String] =
+    Seq(2, 4, 6).flatMap(par =>
+      Seq(1, 3, 5).map(impar => s"[$impar, $par] ")
+    )
+----
+
+== Quiz
+
+- Como usar uma condição no `for`?
+- Qual o valor de a:
+[code, scala]
+----
+val a = for {
+  grade <- Some(10)
+  weight <- Some(5)
+} yield {
+  grade * weight
+}
+----
+- Qual o valor de b:
+[code, scala]
+----
+val b: Either[Int, Int] = for {
+  r <- Right[Int, Int](10)
+  s <- Left[Int, Int](1)
+  t <- Right[Int, Int](5)
+} yield {
+  r * s * t
 }
 ----

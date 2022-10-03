@@ -16,6 +16,10 @@ Veja on-line https://www.coursera.org/[este conteúdo].
 6. link:level1/06-implicits.adoc[Implícitos]
 7. Programação assíncrona com link:level1/07-future.adoc[Future]
 8. link:level1/08-tools.adoc[Ferramental]
+9. Se você ainda não conhece a link:level1/09-jvm.adoc[JVM]
+10. link:level1/10-tdd.adoc[Testes]
+
+Consulte também outras link:level1/00-reference.adoc[referências]
 
 == Nível 2
 
@@ -25,7 +29,7 @@ Veja on-line https://www.coursera.org/[este conteúdo].
 4. Modelo de link:level2/04-sealed-trait.adoc[erros]
 5. Composição de link:level2/05-monad.adoc[funções]
 6. link:level2/06-comprehensions.adoc[For-comprehensions]
-7. link:level2/07-implicits.adoc[Implícitos]
+7. link:level2/07-currying.adoc[Currying]
 
 == Bibliotecas
 

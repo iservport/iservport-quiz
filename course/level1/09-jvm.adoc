@@ -1,0 +1,17 @@
+= JVM
+
+link:../index.adoc[Home]/level1
+
+A JVM (Java Virtual Machine) é um mecanismo que oferece um `application runtime environment`, ou ambiente em tempo de execução para aplicativos.
+
+O `bytecode` gerado pela JVM é convertido no idioma do processador da sua máquina. `Bytecode` é uma linguagem intermediária entre o host e a linguagem original.
+
+== Referências
+
+* https://medium.com/platform-engineer/understanding-java-memory-model-1d0863f6d973[Modelo de memória da JVM]
+
+== Quiz
+
+- Qual o papel do coletor de lixo (garbage collector)?
+- Que papéis cabem à `heap` e ao `stack`?
+- Cite 3 linguagens que geram `bytecode` através da JVM.

@@ -12,4 +12,10 @@ link:../index.adoc[Home]/level1
 
 [source,scala]
 ----
+val result = someAsyncOp(): Future[Int] = ???
 ----
+
+== Quiz
+
+- Pesquise: o que é transparência referencial?
+- Um Future é referencialmente transparente?

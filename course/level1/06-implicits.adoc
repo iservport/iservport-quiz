@@ -2,4 +2,15 @@
 
 link:../index.adoc[Home]/level1
 
-Escopo
+O compilador Scala é capaz de resolver implícitos em um certo escopo mesmo que eles não sejam definidos explcitamente, como sugere o próprio nome.
+
+O compilador Scala resolve:
+
+* *Parâmetros implícitos*, reduzem a duplicação de código em chamadas a métodos diferentes que requerem o mesmo parâmetro, funcionando em muitos casos como Injeção de Dependências.
+* *Conversões implícitas*, são funções do tipo `A => B` automaticamente aplicadas pelo compilador Scala tanto em parâmetros requeridos quanto para tipos retornados.
+* *Classes e Objetos implícitos*, permitem enriquecemento de tipos (ad-hoc inheritance) sem herança.
+
+== Quiz
+
+* Pode haver ambiguidade na seleção de implícitos?
+* Pesquise: Scala 3 e implícitos.

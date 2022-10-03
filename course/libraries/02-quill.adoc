@@ -2,3 +2,30 @@
 
 link:../index.adoc[Home]/libraries
 
+Quill é um sistema que permite escrever consultas SQL como se fossem código Scala. O Quill permite que você veja consultas SQL em tempo de compilação.
+
+Quill usa case classes simples para construir consultas.
+
+[source,scala]
+----
+case class Person(id: Int, name: String, age: Int)
+val q = quote {
+ query[Person].filter(p => p.name == "Maria")
+}
+run(q)
+----
+
+Referências:
+
+- https://github.com/zio/zio-quill
+
+== Quiz
+Veradeiro ou falso:
+
+* A consulta acima resulta em:
+[source,sql]
+----
+SELECT p.id, p.name, p.age FROM Person p WHERE p.name = 'Maria'
+----
+
+* O Quill suporta junções, agregações e permite que consultas sejam passadas para funções.

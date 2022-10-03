@@ -45,3 +45,7 @@ val toString: Any => String = _.toString
 ----
 def toParagraph(a: Any): String = s"<p>$a</p>
 ----
+
+== Convenção
+
+Chamaremos de **função** àquelas definidas com `val` e **método** as definidas com `def`.

@@ -1,8 +1,6 @@
-package course
+package course.level1
 
-object Level1 {
-
-  object L04CaseClass extends App {
+object L04CaseClass extends App {
     case class Rectangle(l1: Double, l2: Double)
     val result = Rectangle(2, 3) match {
       case Rectangle(_, b) if b < 5 => "Altura insuficiente"
@@ -11,4 +9,3 @@ object Level1 {
     }
     println(result)
   }
-}

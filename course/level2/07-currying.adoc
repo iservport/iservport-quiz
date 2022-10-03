@@ -1,0 +1,40 @@
+= Currying
+
+link:../index.adoc[Home]/level2
+
+Currying é o processo de converter uma função com vários argumentos em uma sequência de funções que recebem um argumento. Cada função retorna outra função que consome o argumento seguinte.
+
+Para funções, ao invés de:
+[code, scala]
+----
+val f1: (Int, Int) = > Int = ???
+----
+Teremos:
+[code, scala]
+----
+val f1: Int => Int = > Int = ???
+----
+Para métodos, ao invés de:
+[code, scala]
+----
+def f1(a: Int, b: Int): Int = ???
+----
+Teremos:
+[code, scala]
+----
+def f1(a: Int)(b: Int): Int = ???
+----
+
+== Quiz
+
+- Ao escrever:
+[code, scala]
+----
+def readMyString(str: String)(implicit r: Reader[String]): String = ???
+----
+Qual a condiçãp para usar o código abaixo?
+[code, scala]
+----
+val x = readMyString("teste")
+----
+

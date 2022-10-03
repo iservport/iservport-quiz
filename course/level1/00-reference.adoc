@@ -1,0 +1,9 @@
+= Outras Referências
+
+== Typesafe Hocon
+
+É um formato de arquivos muito usado para manter as configurações de um projeto. Combina elementos de `json`, `properties` e `yaml`.
+
+* https://www.w3schools.io/file/hocon-introduction/
+* https://github.com/lightbend/config
+
