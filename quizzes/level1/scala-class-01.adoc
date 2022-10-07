@@ -1,0 +1,18 @@
+= Quizz: Case Class
+
+1. Quantas propriedades pode ter uma case class:
+* 0..n
+* 1..20
+* 1
+* 0..22
+
+2. Descreva o método unnaply que o compilador cria para a case class usada abaixo:
+
+[code, scala]
+----
+example match {
+  case City(_, state, "BR") => ???
+  case City(name, _, _) => ???
+  case _ => ???
+}
+----

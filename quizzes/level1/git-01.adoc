@@ -1,0 +1,10 @@
+= Quizz: Git
+
+1. Qual a diferença entre:
+   * merge
+   * rebase
+
+2. Qual o resutado para git stash quando:
+   * há mudanças na cópia de trabalho que não estão no índice.
+   * as mudanças já estão no índice mas não no repositório local.
+   * as mudanças já estão no repositório local.

@@ -1,0 +1,12 @@
+= Quizz: Function
+
+1. Explique a diferença entre as funções abaixo:
+* def save(a: String): Boolean = ???
+* def save(a: => String): Boolean = ???
+
+2. Pode uma função tomar como parâmetro outra função?
+
+3. Pode uma função retornar outra função?
+
+4. Se uma função chama a si mesma recursivamente, como evitar que a memória seja exaurida por um grande número de interações?
+
