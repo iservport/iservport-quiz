@@ -1,0 +1,21 @@
+= Quizz: Implicit
+
+1. O que são limites contextuais (context bounds), por exemplo, `[A : List]`?
+2. Enriqueça a classe Int de maneira a permitir `1000.isPositive`.
+3. O que significa `val a = implicitly[A]`?
+
+== Dica
+
+Scala (a partir da v.2.8) permite uma sintaxe abreviada para parâmetros implícitos, chamados limites contextuais.
+
+Resumidamente, um método com um parâmetro de tipo A que requer um parâmetro implícito do tipo M[A]:
+
+[code,scala]
+----
+def foo[A](implicit ma: M[A])
+----
+Pode ser re-escrito como:
+[code,scala]
+----
+def foo[A: M]
+----

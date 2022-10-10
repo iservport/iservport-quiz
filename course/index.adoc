@@ -30,6 +30,7 @@ Consulte também outras link:level1/00-reference.adoc[referências]
 5. Composição de link:level2/05-monad.adoc[funções]
 6. link:level2/06-comprehensions.adoc[For-comprehensions]
 7. link:level2/07-currying.adoc[Currying]
+8. link:level2/08-collections.adoc[Coleções]
 
 == Bibliotecas
 

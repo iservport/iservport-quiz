@@ -43,6 +43,9 @@ Pesquise:
 
 - Funções em uma `trait` podem ser concretas?
 - Uma classe pode extender mais de uma trait?
+- O que é um Type Constructor?
+- O que é um Type Alias?
+- O que é um Self Type?
 
 [source,scala]
 ----

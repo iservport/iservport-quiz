@@ -1,0 +1,67 @@
+= Quizz: Como adicionar nova funcionalidade em classes fechadas
+
+Dado um tipo:
+[code, scala]
+----
+trait Buy[A] {
+  def makeOrBuy(item: A): Boolean
+}
+----
+Queremos que a classe:
+[code, scala]
+----
+case class Item(price: Double)
+----
+*Implemente o método `makeOrBuy`* definido por `Buy` assim:
+[code, scala]
+----
+val makeOrBuy = Item(120.00).makeOrBuy
+----
+Porém não podemos fazer `Item` estender `Buy[Item]` pois a não controlamos o código fonte de `Item`.
+
+Dica:
+
+* Pesquise sobre `Typeclasses`
+* Complete o processo com as seguintes etapas:
+
+    ** crie uma função no objeto companheiro:
++
+[code, scala]
+----
+def makeOrBuy[A](a: A)(implicit buy: Buy[A]): Boolean = buy.makeOrBuy(a)
+----
+    ** Dessa maneira, se houver uma instância de `Buy` implícita no escopo, a você poderá usá-la assim:
++
+[code, scala]
+----
+  val item: Item = Item(100.00)
+  makeOrBuy(item)
+----
+    ** Crie uma classe para conversão implícita:
++
+[code, scala]
+----
+implicit class BuyOps[A: Buy](a: A) {
+  def makeOrBuy(implicit buy: Buy[A]): Boolean = buy.makeOrBuy(a)
+}
+----
+    ** O que enriquece instâncias de `Buy` e permite:
++
+[code, scala]
+----
+  item.makeOrBuy
+----
+    ** Finalmente, crie uma instância de `Buy` para `Item`:
++
+[code, scala]
+----
+implicit val itemInstance: Buy[Item] = ???
+----
+
+*Em seguida utilize o mesmo mecanismo* em uma nova classe `Part` para permitir:
+[code, scala]
+----
+case class Part(leadTime: Int)
+val part: Part = Part(45)
+makeOrBuy(part)
+----
